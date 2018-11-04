@@ -11,7 +11,7 @@ def find_stubs(package):
 
 setup(
     name='docutils-stubs',
-    version='0.0.1',
+    version='0.0.2',
     description='PEP 561 type stubs for docutils',
     url='https://github.com/tk0miya/docutils-stubs',
     author='Takeshi KOMIYA',
@@ -19,4 +19,5 @@ setup(
     packages=['docutils-stubs'],
     install_requires=['docutils==0.14'],
     package_data=find_stubs('docutils-stubs'),
+    zip_safe=False,
 )

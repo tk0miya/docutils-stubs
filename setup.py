@@ -15,6 +15,7 @@ setup(
     name='docutils-stubs',
     version='0.0.2',
     description='PEP 561 type stubs for docutils',
+    long_description=open('README.rst').read(),
     url='https://github.com/tk0miya/docutils-stubs',
     author='Takeshi KOMIYA, cocoatomo',
     author_email='i.tkomiya@gmail.com, cocoatomo77@gmail.com',

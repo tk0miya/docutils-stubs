@@ -1,6 +1,7 @@
 from setuptools import setup
 import os
 
+
 def find_stubs(package):
     stubs = []
     for root, dirs, files in os.walk(package):
@@ -8,6 +9,7 @@ def find_stubs(package):
             path = os.path.join(root, file).replace(package + os.sep, '', 1)
             stubs.append(path)
     return {package: stubs}
+
 
 setup(
     name='docutils-stubs',

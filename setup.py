@@ -13,7 +13,7 @@ def find_stubs(package):
 
 setup(
     name='docutils-stubs',
-    version='0.0.7',
+    version='0.0.8',
     description='PEP 561 type stubs for docutils',
     long_description=open('README.rst').read(),
     url='https://github.com/tk0miya/docutils-stubs',

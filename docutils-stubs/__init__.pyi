@@ -6,6 +6,7 @@ from typing import Any, List, Tuple, Type
 from docutils.transforms import Transform
 
 __docformat__: str
+__version__: str
 __version_info__: Tuple[int, int, int, str, int, bool]
 __version_details__: str
 

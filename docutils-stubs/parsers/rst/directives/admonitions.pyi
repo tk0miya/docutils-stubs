@@ -5,7 +5,9 @@
 from docutils import nodes
 from docutils.nodes import Node, admonition, attention, caution, danger, error, hint, important, note, tip, warning
 from docutils.parsers.rst import Directive
-from typing import Any, Callable, Dict, List, Type
+from typing import Any, Callable, Dict, List, Type, TypeVar
+
+N_co = TypeVar('N_co', bound=Node, covariant=True)
 
 __docformat__: str
 
@@ -14,7 +16,7 @@ class BaseAdmonition(Directive):
     option_spec: Dict[str, Callable[[str], Any]] = ...
     has_content: bool = ...
     node_class: Type[nodes.Admonition] = ...
-    def run(self) -> List[Node]: ...
+    def run(self) -> List[N_co]: ...
 
 class Admonition(BaseAdmonition):
     required_arguments: int = ...

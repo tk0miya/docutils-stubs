@@ -5,7 +5,9 @@
 from docutils import nodes
 from docutils.nodes import Node
 from docutils.parsers.rst import Directive, states
-from typing import Dict, List, Tuple, Type
+from typing import Dict, List, Tuple, Type, TypeVar
+
+N_co = TypeVar('N_co', bound=Node, covariant=True)
 
 __docformat__: str
 
@@ -17,4 +19,4 @@ class MetaBody(states.SpecializedBody):
 class Meta(Directive):
     has_content: bool = ...
     SMkwargs: Dict[str, Tuple[Type[MetaBody]]] = ...
-    def run(self) -> List[Node]: ...
+    def run(self) -> List[N_co]: ...

@@ -6,3 +6,5 @@ release:
 .PHONY: check
 check:
 	find docutils-stubs -name '*.pyi' -print0 | xargs -0 flake8
+	test -e docutils || ln -sF docutils-stubs/ docutils
+	mypy docutils

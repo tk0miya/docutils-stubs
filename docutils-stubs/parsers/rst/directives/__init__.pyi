@@ -5,7 +5,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from types import ModuleType
-from typing import Any, Callable, List, Optional, Pattern, Tuple, Type
+from typing import Callable, List, Optional, Pattern, Tuple, Type
 
 __docformat__: str
 

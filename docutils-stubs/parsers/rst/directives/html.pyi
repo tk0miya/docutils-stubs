@@ -5,7 +5,7 @@
 from docutils import nodes
 from docutils.nodes import Node
 from docutils.parsers.rst import Directive, states
-from typing import Any, Dict, List, Tuple, Type
+from typing import Dict, List, Tuple, Type
 
 __docformat__: str
 

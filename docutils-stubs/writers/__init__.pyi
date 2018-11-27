@@ -6,7 +6,7 @@ from docutils import Component
 from docutils.io import Output
 from docutils.transforms import Transform
 from types import ModuleType
-from typing import Any, AnyStr, Dict, List, Type, Union
+from typing import Any, Dict, List, Type, Union
 
 __docformat__: str
 

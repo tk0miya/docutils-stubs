@@ -5,7 +5,6 @@
 from docutils import Component
 from docutils import nodes
 from docutils.statemachine import StringList
-from typing import Any
 
 __docformat__: str
 

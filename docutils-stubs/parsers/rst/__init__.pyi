@@ -5,7 +5,7 @@
 import docutils.parsers
 import docutils.statemachine
 from docutils import nodes
-from docutils.nodes import Node, document
+from docutils.nodes import Node
 from docutils.parsers.rst.states import Inliner, RSTState, RSTStateMachine
 from docutils.statemachine import StringList
 from docutils.transforms import Transform

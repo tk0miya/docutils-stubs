@@ -4,7 +4,7 @@
 
 from docutils import parsers
 from docutils.nodes import document
-from typing import Any, Sequence, Tuple
+from typing import Sequence, Tuple
 
 class Parser(parsers.Parser):
     supported: Tuple[str, ...] = ...

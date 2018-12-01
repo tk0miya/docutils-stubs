@@ -4,12 +4,10 @@
 
 from docutils.nodes import Node
 from docutils.parsers.rst import Directive
-from typing import Any, Callable, Dict, List, TypeVar
-
-N_co = TypeVar('N_co', bound=Node, covariant=True)
+from typing import Any, Callable, Dict, List
 
 __docformat__: str
 
 class TargetNotes(Directive):
     option_spec: Dict[str, Callable[[str], Any]] = ...
-    def run(self) -> List[N_co]: ...
+    def run(self) -> List[Node]: ...

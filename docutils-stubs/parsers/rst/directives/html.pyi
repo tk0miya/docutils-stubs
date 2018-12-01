@@ -5,7 +5,7 @@
 from docutils import nodes
 from docutils.nodes import Node
 from docutils.parsers.rst import Directive, states
-from typing import Dict, List, Tuple, Type, TypeVar
+from typing import Any, Dict, List, Match, Tuple, Type, TypeVar
 
 N_co = TypeVar('N_co', bound=Node, covariant=True)
 
@@ -13,8 +13,8 @@ __docformat__: str
 
 class MetaBody(states.SpecializedBody):
     class meta(nodes.Special, nodes.PreBibliographic, nodes.Element): ...
-    def field_marker(self, match, context, next_state): ...
-    def parsemeta(self, match): ...
+    def field_marker(self, match: Match, context: Any, next_state: str) -> Tuple[List[Any], str, List[Any]]: ...
+    def parsemeta(self, match: Match) -> Tuple[Union[nodes.pending, nodes.system_message], bool]: ...
 
 class Meta(Directive):
     has_content: bool = ...

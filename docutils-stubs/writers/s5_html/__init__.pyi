@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Pattern, Tuple, Type
 __docformat__: str
 themes_dir_path: str
 
-def find_theme(name: str): ...
+def find_theme(name: str) -> str: ...
 
 class Writer(html4css1.Writer):
     settings_spec: Tuple[str, Any, Tuple[Tuple[str, List[str], Dict[str, Any]], ...], str, Any, Tuple[Tuple[str, List[str], Dict[str, Any]], ...]] = ...  # type: ignore

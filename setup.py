@@ -13,7 +13,7 @@ def find_stubs(package):
 
 setup(
     name='docutils-stubs',
-    version='0.0.20',
+    version='0.0.22',
     description='PEP 561 type stubs for docutils',
     long_description=open('README.rst').read(),
     classifiers=['License :: OSI Approved :: The Unlicense (Unlicense)'],

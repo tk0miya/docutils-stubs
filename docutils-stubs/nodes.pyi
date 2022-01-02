@@ -7,7 +7,7 @@ from docutils.frontend import Values
 from docutils.transforms import Transformer, Transform
 from docutils.utils import Reporter
 
-from typing import Any, Callable, Dict, Iterable, Iterator, List, Optional, overload, Tuple, Type, TypeVar
+from typing import Any, Callable, Dict, Generator, Iterable, Iterator, List, Optional, overload, Tuple, Type, TypeVar
 
 __docformat__: str
 
@@ -28,6 +28,11 @@ class Node:
     def setup_child(self, child: "Node") -> None: ...
     def walk(self, visitor: "NodeVisitor") -> bool: ...
     def walkabout(self, visitor: "NodeVisitor") -> bool: ...
+
+    @overload
+    def findall(self, condition: Type[N] = ..., include_self: bool = ..., descend: bool = ..., siblings: bool = ..., ascend: bool = ...) -> Generator[N, None, None]: ...
+    @overload
+    def findall(self, condition: Callable[["Node"], bool] = ..., include_self: bool = ..., descend: bool = ..., siblings: bool = ..., ascend: bool = ...) -> Generator[N, None, None]: ...
 
     @overload
     def traverse(self, condition: Type[N] = ..., include_self: bool = ..., descend: bool = ..., siblings: bool = ..., ascend: bool = ...) -> List[N]: ...

@@ -6,7 +6,7 @@ from docutils import ApplicationError, DataError
 from docutils import nodes
 from docutils.frontend import Values
 from docutils.io import Output
-from typing import Any, Dict, Callable, Generator, IO, Iterable, List, Mapping, Optional, Pattern, Tuple, Union
+from typing import Any, Dict, Callable, IO, Iterable, List, Mapping, Optional, Pattern, Tuple, Union
 
 __docformat__: str
 
@@ -77,7 +77,6 @@ east_asian_widths: Dict[str, int]
 
 def column_width(text: str) -> int: ...
 def uniq(L: List) -> List: ...
-def unique_combinations(items: List, n: int) -> Generator[List, None, None]: ...
 def normalize_language_tag(tag: str) -> List[str]: ...
 
 class DependencyList:
